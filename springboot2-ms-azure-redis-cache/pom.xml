@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.3.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>org.lba.springboot2.azure</groupId>
+	<artifactId>springboot2-ms-azure-redis-cache</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>springboot2-ms-azure-redis-cache</name>
+	<description>Demo project for Spring Boot MS - Azure RedisCache</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<!-- Azure ServiceBus -->
+		<azure.version>2.3.3</azure.version>
+		<azure.servicebus.springbs.version>2.2.5</azure.servicebus.springbs.version>
+		<!-- UI Libraries -->
+		<org.webjars.locator.version>0.40</org.webjars.locator.version>
+		<org.webjars.bootstrap.version>4.5.2</org.webjars.bootstrap.version>
+		<org.webjars.jquery.version>3.5.1</org.webjars.jquery.version>
+		<!-- Utils -->
+		<log4j.version>1.2.17</log4j.version>
+		<!-- MyBatis SB starter -->
+		<org.mybatis.springbs.version>2.1.3</org.mybatis.springbs.version>
+	</properties>
+
+	<dependencies>
+		<!-- Common springboot utils -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<!-- BATCH -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-batch</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<!-- Springboot Redis library -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!-- Required for MS Azure Configuration  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-integration</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+
+		<!-- DB Related libs -->
+		<!-- MyBatis -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${org.mybatis.springbs.version}</version>
+		</dependency>
+		<!-- H2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- UI Libraries -->
+		<!-- Thymeleaf starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!-- WebJars -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+			<version>${org.webjars.locator.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>${org.webjars.bootstrap.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>${org.webjars.jquery.version}</version>
+		</dependency>
+
+		<!-- Utils -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- Azure Libraries -->
+		<dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>azure-spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>azure-keyvault-secrets-spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>azure-servicebus-spring-boot-starter</artifactId>
+			<version>${azure.servicebus.springbs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>azure-servicebus-jms-spring-boot-starter</artifactId>
+		</dependency>
+
+		<!-- Test libraries -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.batch</groupId>
+			<artifactId>spring-batch-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-spring-boot-bom</artifactId>
+				<version>${azure.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
