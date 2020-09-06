@@ -32,7 +32,7 @@ http://localhost:8080/console/
 }
 ```
 
-Note: Ensure that into request there are:
+**Note:** Ensure that into request there are:
 1) Header config:  
 **Key:** Content-Type - **Value:** application/json  
 
@@ -48,7 +48,7 @@ Note: Ensure that into request there are:
   "surname":"EmployeeSurname_2_Mod"
 }
 ```
-Note: Ensure that into request there are:
+**Note:** Ensure that into request there are:
 1) Header config:  
 **Key:** Content-Type - **Value:** application/json  
 
@@ -58,4 +58,4 @@ Note: Ensure that into request there are:
 
 # SOAP WSDL Service
 ## Exposed SOAP WS
-**Soap WSDL url: ** http://localhost:8080/ws/soapwsdl-endpoint.wsdl
+**Soap WSDL url:** http://localhost:8080/ws/soapwsdl-endpoint.wsdl
