@@ -14,15 +14,15 @@ http://localhost:8080/console/
 **URL:** http://localhost:8080/employee/all  
 
 #### Get Employee by id
-**URL: ** http://localhost:8080/employee/10001
+**URL:** http://localhost:8080/employee/10001
 (ID of employee preloaded with H2 initial load script )
 
-**URL: ** http://localhost:8080//employee/1
+**URL:** http://localhost:8080//employee/1
 (Invocation on id not present into with H2 initial load script )
 
 ### POST
 #### Create a new employee
-**URL: ** http://localhost:8080/employee  
+**URL:** http://localhost:8080/employee  
 **JSON BODY for request:**
 
 ```json
@@ -38,7 +38,7 @@ Note: Ensure that into request there are:
 
 ### PUT
 #### Update an existing employee
-**URL: ** http://localhost:8080/employee/10004  
+**URL:** http://localhost:8080/employee/10004  
 **JSON BODY for request:**
 
 ```json
@@ -54,7 +54,7 @@ Note: Ensure that into request there are:
 
 ### DELETE
 #### Delete Employee by id
-**URL: ** http://localhost:8080/employee/10004
+**URL:** http://localhost:8080/employee/10004
 
 # SOAP WSDL Service
 ## Exposed SOAP WS
