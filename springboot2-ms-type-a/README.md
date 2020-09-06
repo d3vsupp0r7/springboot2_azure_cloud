@@ -5,6 +5,7 @@
 * [Getting started](#getting-started)
   * [Prerequisite](#prerequisite)
   * [Built with](#built-with)
+* [REST API Exposure](#rest-api-exposure)
 * [Useful commands](#useful-commands)  
 
 # Scope
