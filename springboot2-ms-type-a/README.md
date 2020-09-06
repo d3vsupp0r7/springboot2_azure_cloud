@@ -28,6 +28,8 @@ This is a Springboot 2.x CRUD example, based on employee management domain.
 http://localhost:8080/console/  
 
 # REST API Exposure
+To test this springboot 2.x application as a REST service, a postman project can be found under folder **${project.folder}/REST-API-Invocation/postman**. You can run the default REST request to interact and test the demo project.
+
 ## Employee REST API
 ### GET
 #### List all employees
