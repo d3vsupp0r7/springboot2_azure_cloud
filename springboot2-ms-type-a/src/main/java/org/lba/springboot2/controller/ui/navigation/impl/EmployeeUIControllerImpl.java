@@ -16,6 +16,7 @@ import org.lba.springboot2.db.model.Employee;
 import org.lba.springboot2.rest.service.EmployeeService;
 import org.lba.springboot2.util.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -32,6 +33,7 @@ public class EmployeeUIControllerImpl implements EmployeeControllerUI {
 	static final Logger logger = Logger.getLogger(EmployeeUIControllerImpl.class); 
 
 	@Autowired
+	@Qualifier("employeeAppService")
 	private EmployeeService employeeService;
 
 	//C
@@ -107,7 +109,7 @@ public class EmployeeUIControllerImpl implements EmployeeControllerUI {
 
 		logger.debug("Update for employee with id: " + id);
 		logger.debug("Update submit form data: " + employee.toString());
-		Employee savedEmployee =employeeService.updateEmployee(id, employee);
+		Employee savedEmployee =employeeService.updateEmployeeById(id, employee);
 		logger.debug("Updated employee on db: " + savedEmployee.toString());
 		
 		return "redirect:/employee-ui/all";
