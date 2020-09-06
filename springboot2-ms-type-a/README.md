@@ -14,10 +14,10 @@ http://localhost:8080/console/
 **URL:** http://localhost:8080/employee/all  
 
 #### Get Employee by id
-**URL:** http://localhost:8080/employee/10001
+**URL:** http://localhost:8080/employee/10001  
 (ID of employee preloaded with H2 initial load script )
 
-**URL:** http://localhost:8080//employee/1
+**URL:** http://localhost:8080//employee/1  
 (Invocation on id not present into with H2 initial load script )
 
 ### POST
@@ -33,8 +33,8 @@ http://localhost:8080/console/
 ```
 
 Note: Ensure that into request there are:
-1) Header config:
-**Key: ** Content-Type - **Value: ** application/json  
+1) Header config:  
+**Key:** Content-Type - **Value:** application/json  
 
 ### PUT
 #### Update an existing employee
@@ -49,8 +49,8 @@ Note: Ensure that into request there are:
 }
 ```
 Note: Ensure that into request there are:
-1) Header config:
-**Key: ** Content-Type - **Value: ** application/json  
+1) Header config:  
+**Key:** Content-Type - **Value:** application/json  
 
 ### DELETE
 #### Delete Employee by id
