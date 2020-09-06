@@ -11,7 +11,7 @@ http://localhost:8080/console/
 ## Employee REST API
 ### GET
 #### List all employees
-**URL: ** http://localhost:8080/employee/all  
+**URL:** http://localhost:8080/employee/all  
 
 #### Get Employee by id
 **URL: ** http://localhost:8080/employee/10001
