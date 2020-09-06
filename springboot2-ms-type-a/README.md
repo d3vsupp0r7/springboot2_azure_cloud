@@ -1,8 +1,28 @@
 # springboot2-ms-type-a
 
-# Run
-Default Port: 8080  
-Default URL : http://localhost:8080/  
+# Table of Contents
+* [Scope](#scope)
+* [Getting started](#getting-started)
+  * [Prerequisite](#prerequisite)
+  * [Built with](#built-with)
+* [Useful commands](#useful-commands)  
+
+# Scope
+
+This is a Springboot 2.x CRUD example, based on employee management domain.
+
+## Getting started
+### Run the microservice
+**Default Port:** 8080  
+**Default URL:** http://localhost:8080/  
+
+### Prerequisite
+* Java version 1.8
+* Maven 
+
+## Built with
+* [Java SDK Version](http://www.oracle.com/technetwork/java/javase/downloads/index.html) - 1.8
+* [Maven](https://maven.apache.org/) - Dependency Management
 
 # H2 DB
 http://localhost:8080/console/  
@@ -58,4 +78,10 @@ http://localhost:8080/console/
 
 # SOAP WSDL Service
 ## Exposed SOAP WS
-**Soap WSDL url:** http://localhost:8080/ws/soapwsdl-endpoint.wsdl
+**Soap WSDL url:** http://localhost:8080/ws/soapwsdl-endpoint.wsdl  
+
+# Useful commands
+
+## Windows - close task on open port
+netstat -ano | findstr :8080  
+taskkill /PID 6152 /F
